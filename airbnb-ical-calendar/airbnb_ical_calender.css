@@ -1,0 +1,76 @@
+div.vanilla-calendar button.vanilla-calendar-day__btn {
+	padding: 0;
+}
+div.vanilla-calendar div.vanilla-calendar-controls button {
+	padding: 0;
+}
+div.vanilla-calendar button.vanilla-calendar-day__btn:hover {
+	opacity: 1;
+}
+[data-calendar-theme=light] .vanilla-calendar-days {
+	overflow: hidden;
+}
+[data-calendar-theme=light] .vanilla-calendar-days_selecting .vanilla-calendar-day__btn {
+	z-index: 0;
+}
+[data-calendar-theme=light] .vanilla-calendar-week__day_weekend,
+[data-calendar-theme=light] .vanilla-calendar-day__btn_weekend {
+	color: rgba(0,0,0,0.6);
+}
+
+[data-calendar-theme=light] .vanilla-calendar-day__btn:not(.vanilla-calendar-day__btn_selected) {
+	z-index: 2;
+	background: none;
+	border-radius: 0;
+}
+[data-calendar-theme=light] .vanilla-calendar-day__btn_selected, 
+[data-calendar-theme=light] .vanilla-calendar-day__btn_selected:hover,
+[data-calendar-theme=light] .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected,
+[data-calendar-theme=light] .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected:hover {
+	background: #00CCBF;
+}
+[data-calendar-theme=light] .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_intermediate,
+[data-calendar-theme=light] .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_intermediate:hover,
+[data-calendar-theme=light] .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_intermediate,
+[data-calendar-theme=light] .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_intermediate:hover {
+	background: #72F2EB;
+	color: #3F7C85;
+}
+[data-calendar-theme=light] button.vanilla-calendar-day__btn.vanilla-calendar-day__btn_hover {
+	background: #72F2EB;
+	opacity: 0.7;
+}
+.vanilla-calendar-day__btn, 
+.vanilla-calendar-day_selected-first .vanilla-calendar-day__btn_selected,
+.vanilla-calendar-day_selected-last .vanilla-calendar-day__btn_selected {
+	border-radius: 0;
+}
+[data-calendar-theme=light] .vanilla-calendar-day__btn.half-start:before,
+[data-calendar-theme=light] .vanilla-calendar-day__btn.half-end:before {
+	position: absolute;
+	content: ' ';
+	width: 0px;
+	top: 0;
+	z-index: -1;
+}
+[data-calendar-theme=light] .vanilla-calendar-day__btn.half-start:before {
+	border-left: 36px solid transparent;
+	border-bottom: 30px solid #FF5F5D;
+	right:0;
+}
+[data-calendar-theme=light] .vanilla-calendar-day__btn.half-end:before {
+	border-right: 36px solid transparent;
+	border-top: 30px solid #FF5F5D;
+	left:0;
+}
+
+[data-calendar-theme=light] .vanilla-calendar-day__btn.vanilla-calendar-day__btn_disabled {
+	background: #FF5F5D;
+	color: white;
+	z-index: 1;
+}
+
+[data-calendar-theme=light] .vanilla-calendar-day__btn_prev, 
+[data-calendar-theme=light] .vanilla-calendar-day__btn_next {
+	display: none;
+}
