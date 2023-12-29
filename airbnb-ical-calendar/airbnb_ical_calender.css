@@ -1,8 +1,38 @@
+div.vanilla-calendar {
+	width: 100%;
+}
+.vanilla-calendar-grid {
+    display: flex;
+    flex-grow: 1;
+    gap: 1.75rem;
+    justify-content: center;
+}
 [data-calendar-theme=light] button.vanilla-calendar-month, 
+[data-calendar-theme=light] .vanilla-calendar-year,
 [data-calendar-theme=light] button.vanilla-calendar-month:hover, 
-[data-calendar-theme=light] .vanilla-calendar-year, 
-[data-calendar-theme=light] .vanilla-calendar-year:hover {
+[data-calendar-theme=light] button.vanilla-calendar-month:focus, 
+[data-calendar-theme=light] .vanilla-calendar-year:hover, 
+[data-calendar-theme=light] .vanilla-calendar-year:focus {
     color: #64748b;
+    border-radius: 0;
+}
+button.vanilla-calendar-month:hover, 
+button.vanilla-calendar-year:hover {
+    color: #004f4a !important;
+    background: #00ccbf !important;
+}
+[data-calendar-theme=light] .vanilla-calendar-months__month.vanilla-calendar-months__month_selected,
+[data-calendar-theme=light] .vanilla-calendar-months__month.vanilla-calendar-months__month_selected:hover,
+[data-calendar-theme=light] .vanilla-calendar-months__month.vanilla-calendar-months__month_selected:focus {
+	background-color: #00CCBF;
+    border-radius: 0;
+}
+.vanilla-calendar-arrow:before {
+	background-color: #64748b !important;
+}
+.vanilla-calendar-arrow:hover,
+.vanilla-calendar-arrow:focus {
+    background-color: #00ccbf !important;
 }
 div.vanilla-calendar button.vanilla-calendar-day__btn {
 	padding: 0;
@@ -10,7 +40,8 @@ div.vanilla-calendar button.vanilla-calendar-day__btn {
 div.vanilla-calendar div.vanilla-calendar-controls button {
 	padding: 0;
 }
-div.vanilla-calendar button.vanilla-calendar-day__btn:hover {
+div.vanilla-calendar button.vanilla-calendar-day__btn:hover,
+div.vanilla-calendar button.vanilla-calendar-day__btn:focus {
 	opacity: 1;
 }
 [data-calendar-theme=light] .vanilla-calendar-days {
@@ -23,7 +54,6 @@ div.vanilla-calendar button.vanilla-calendar-day__btn:hover {
 [data-calendar-theme=light] .vanilla-calendar-day__btn_weekend {
 	color: rgba(0,0,0,0.6);
 }
-
 [data-calendar-theme=light] .vanilla-calendar-day__btn:not(.vanilla-calendar-day__btn_selected) {
 	z-index: 2;
 	background: none;
@@ -31,19 +61,23 @@ div.vanilla-calendar button.vanilla-calendar-day__btn:hover {
 }
 [data-calendar-theme=light] .vanilla-calendar-day__btn_selected, 
 [data-calendar-theme=light] .vanilla-calendar-day__btn_selected:hover,
+[data-calendar-theme=light] .vanilla-calendar-day__btn_selected:focus,
 [data-calendar-theme=light] .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected,
-[data-calendar-theme=light] .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected:hover {
-	background: #00CCBF;
+[data-calendar-theme=light] .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected:hover,
+[data-calendar-theme=light] .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected:focus {
+	background-color: #00CCBF;
 }
-[data-calendar-theme=light] .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_intermediate,
-[data-calendar-theme=light] .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_intermediate:hover,
-[data-calendar-theme=light] .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_intermediate,
-[data-calendar-theme=light] .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_intermediate:hover {
-	background: #72F2EB;
+[data-calendar-theme=light] .vanilla-calendar-day_selected-intermediate .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected, 
+[data-calendar-theme=light] .vanilla-calendar-day_selected-intermediate .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected:hover, 
+[data-calendar-theme=light] .vanilla-calendar-day_selected-intermediate .vanilla-calendar-day__btn_weekend.vanilla-calendar-day__btn_selected:focus, 
+[data-calendar-theme=light] .vanilla-calendar-day_selected-intermediate .vanilla-calendar-day__btn_selected, 
+[data-calendar-theme=light] .vanilla-calendar-day_selected-intermediate .vanilla-calendar-day__btn_selected:hover, 
+[data-calendar-theme=light] .vanilla-calendar-day_selected-intermediate .vanilla-calendar-day__btn_selected:focus {
+	background-color: #72F2EB;
 	color: #3F7C85;
 }
 [data-calendar-theme=light] button.vanilla-calendar-day__btn.vanilla-calendar-day__btn_hover {
-	background: #72F2EB;
+	background-color: #72F2EB;
 	opacity: 0.7;
 }
 .vanilla-calendar-day__btn, 
@@ -60,18 +94,18 @@ div.vanilla-calendar button.vanilla-calendar-day__btn:hover {
 	z-index: -1;
 }
 [data-calendar-theme=light] .vanilla-calendar-day__btn.half-start:before {
-	border-left: 36px solid transparent;
+	border-left: 30px solid transparent;
 	border-bottom: 30px solid #FF5F5D;
 	right:0;
 }
 [data-calendar-theme=light] .vanilla-calendar-day__btn.half-end:before {
-	border-right: 36px solid transparent;
+	border-right: 30px solid transparent;
 	border-top: 30px solid #FF5F5D;
 	left:0;
 }
 
 [data-calendar-theme=light] .vanilla-calendar-day__btn.vanilla-calendar-day__btn_disabled {
-	background: #FF5F5D;
+	background-color: #FF5F5D;
 	color: white;
 	z-index: 1;
 }
@@ -79,13 +113,4 @@ div.vanilla-calendar button.vanilla-calendar-day__btn:hover {
 [data-calendar-theme=light] .vanilla-calendar-day__btn_prev, 
 [data-calendar-theme=light] .vanilla-calendar-day__btn_next {
 	display: none;
-}
-button.vanilla-calendar-month:hover, button.vanilla-calendar-year:hover {
-    color: #004f4a !important;
-    background: #00ccbf !important;
-}
-[data-calendar-theme=light] .vanilla-calendar-months__month.vanilla-calendar-months__month_selected, [data-calendar-theme=light] .vanilla-calendar-months__month.vanilla-calendar-months__month_selected:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(6 182 212 / var(--tw-bg-opacity));
-    color: #fff;
 }
