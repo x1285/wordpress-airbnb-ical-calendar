@@ -1,3 +1,9 @@
+[data-calendar-theme=light] button.vanilla-calendar-month, 
+[data-calendar-theme=light] button.vanilla-calendar-month:hover, 
+[data-calendar-theme=light] .vanilla-calendar-year, 
+[data-calendar-theme=light] .vanilla-calendar-year:hover {
+    color: #64748b;
+}
 div.vanilla-calendar button.vanilla-calendar-day__btn {
 	padding: 0;
 }
@@ -73,4 +79,13 @@ div.vanilla-calendar button.vanilla-calendar-day__btn:hover {
 [data-calendar-theme=light] .vanilla-calendar-day__btn_prev, 
 [data-calendar-theme=light] .vanilla-calendar-day__btn_next {
 	display: none;
+}
+button.vanilla-calendar-month:hover, button.vanilla-calendar-year:hover {
+    color: #004f4a !important;
+    background: #00ccbf !important;
+}
+[data-calendar-theme=light] .vanilla-calendar-months__month.vanilla-calendar-months__month_selected, [data-calendar-theme=light] .vanilla-calendar-months__month.vanilla-calendar-months__month_selected:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(6 182 212 / var(--tw-bg-opacity));
+    color: #fff;
 }

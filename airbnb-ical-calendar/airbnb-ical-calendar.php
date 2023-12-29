@@ -84,6 +84,9 @@ function airbnb_ical_calender_createHtml($icalUrl, $months, $allowSelection) {
 							disabled: [".$jsDisabledDates."],
 							disableGaps: true,
 						},
+						visibility: {
+							theme: 'light',
+						},
 						lang: 'DE',
 						selection: {
 							day: ".($allowSelection == true ? "'multiple-ranged'" : "false").",

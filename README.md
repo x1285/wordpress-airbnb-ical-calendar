@@ -2,7 +2,7 @@
 
 A simple wordpress plugin to add a occupancy calendar for your airbnb to your page.
 
-[![wordpress-airbnb-ical-calendar preview](preview.png)]
+![wordpress-airbnb-ical-calendar preview](preview.png)
 
 ## Special features 🚀
 
