@@ -105,7 +105,8 @@ div.vanilla-calendar button.vanilla-calendar-day__btn:focus {
 	left:0;
 }
 
-[data-calendar-theme=light] .vanilla-calendar-day__btn.vanilla-calendar-day__btn_disabled {
+[data-calendar-theme=light] .vanilla-calendar-day__btn.vanilla-calendar-day__btn_disabled,
+[data-calendar-theme=light] .vanilla-calendar-day__btn.vanilla-calendar-day__btn_today.half-start {
 	background-color: #FF5F5D;
 	color: white;
 	z-index: 1;
